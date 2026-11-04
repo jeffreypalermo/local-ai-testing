@@ -1,0 +1,41 @@
+"model","harness","task","pass","minutes","timed_out","checks","detail"
+"nemotron-3.5-super:120b-a12b","pi","cs-bugfix","True","6.9","False","8 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","pi","cs-feature","True","3.6","False","11 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","pi","py-bugfix","True","0.6","False","Ran 6 tests in 0.015s OK","Ran 6 tests in 0.015s OK"
+"nemotron-3.5-super:120b-a12b","pi","py-feature","True","3","False","Ran 7 tests in 0.188s OK","Ran 7 tests in 0.188s OK"
+"nemotron-3.5-super:120b-a12b","opencode","cs-bugfix","True","3.2","False","8 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","opencode","cs-feature","True","4.1","False","11 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","opencode","py-bugfix","True","1.3","False","Ran 6 tests in 0.011s OK","Ran 6 tests in 0.011s OK"
+"nemotron-3.5-super:120b-a12b","opencode","py-feature","True","5.6","False","Ran 7 tests in 0.365s OK","Ran 7 tests in 0.365s OK"
+"qwen3.8:27b","pi","cs-bugfix","True","1.7","False","8 pass / 0 fail",""
+"qwen3.8:27b","pi","cs-feature","True","1.6","False","11 pass / 0 fail",""
+"qwen3.8:27b","pi","py-bugfix","True","0.6","False","Ran 6 tests in 0.014s OK","Ran 6 tests in 0.014s OK"
+"qwen3.8:27b","pi","py-feature","True","1.1","False","Ran 7 tests in 0.171s OK","Ran 7 tests in 0.171s OK"
+"qwen3.8:27b","opencode","cs-bugfix","True","1.6","False","8 pass / 0 fail",""
+"qwen3.8:27b","opencode","cs-feature","True","7.2","False","11 pass / 0 fail",""
+"qwen3.8:27b","opencode","py-bugfix","True","0.9","False","Ran 6 tests in 0.014s OK","Ran 6 tests in 0.014s OK"
+"qwen3.8:27b","opencode","py-feature","True","2.8","False","Ran 7 tests in 0.246s OK","Ran 7 tests in 0.246s OK"
+"gpt-oss:120b","pi","cs-bugfix","True","1","False","8 pass / 0 fail",""
+"gpt-oss:120b","pi","cs-feature","True","1.2","False","11 pass / 0 fail",""
+"gpt-oss:120b","pi","py-bugfix","True","0.3","False","Ran 6 tests in 0.015s OK","Ran 6 tests in 0.015s OK"
+"gpt-oss:120b","pi","py-feature","True","1.1","False","Ran 7 tests in 0.174s OK","Ran 7 tests in 0.174s OK"
+"gpt-oss:120b","opencode","cs-bugfix","False","1.1","False","3 pass / 5 fail","FAIL SAVE10 lowercase FAIL SAVE10 uppercase FAIL BULK50 at exactly 500 FAIL HALF capped at 100"
+"gpt-oss:120b","opencode","cs-feature","False","4.1","False","10 pass / 1 fail","FAIL CRLF, no trailing newline"
+"gpt-oss:120b","opencode","py-bugfix","True","3.6","False","Ran 6 tests in 0.014s OK","Ran 6 tests in 0.014s OK"
+"gpt-oss:120b","opencode","py-feature","True","2","False","Ran 7 tests in 0.228s OK","Ran 7 tests in 0.228s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","cs-bugfix","True","2","False","8 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","cs-feature","True","3","False","11 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","py-bugfix","True","0.8","False","Ran 6 tests in 0.010s OK","Ran 6 tests in 0.010s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","py-feature","True","5.4","False","Ran 7 tests in 0.366s OK","Ran 7 tests in 0.366s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","cs-bugfix","True","2.7","False","8 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","cs-feature","True","8.9","False","11 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","py-bugfix","True","0.9","False","Ran 6 tests in 0.014s OK","Ran 6 tests in 0.014s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","py-feature","True","4.4","False","Ran 7 tests in 0.275s OK","Ran 7 tests in 0.275s OK"
+"nemotron-3.5-lightning","pi","cs-bugfix","True","1.4","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","pi","cs-feature","True","4.6","False","11 pass / 0 fail",""
+"nemotron-3.5-lightning","pi","py-bugfix","True","1","False","Ran 6 tests in 0.015s OK","Ran 6 tests in 0.015s OK"
+"nemotron-3.5-lightning","pi","py-feature","True","4.1","False","Ran 7 tests in 0.151s OK","Ran 7 tests in 0.151s OK"
+"nemotron-3.5-lightning","opencode","cs-bugfix","True","1.9","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","opencode","cs-feature","False","4.5","False","0 pass / 0 fail","EXCEPTION NotImplementedException: The method or operation is not implemented."
+"nemotron-3.5-lightning","opencode","py-bugfix","True","1.3","False","Ran 6 tests in 0.015s OK","Ran 6 tests in 0.015s OK"
+"nemotron-3.5-lightning","opencode","py-feature","False","12.9","False","",""

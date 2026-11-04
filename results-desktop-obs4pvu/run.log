@@ -1,0 +1,13 @@
+11:28:02 server http://192.168.1.66:11434 (0.40.14), models: nemotron-3.5-super:120b-a12b, qwen3.8:27b, gpt-oss:120b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL, nemotron-3.5-lightning
+11:28:02 coding (pi) nemotron-3.5-super:120b-a12b
+11:42:19 coding (opencode) nemotron-3.5-super:120b-a12b
+11:56:41 coding (pi) qwen3.8:27b
+12:01:47 coding (opencode) qwen3.8:27b
+12:14:22 coding (pi) gpt-oss:120b
+12:18:06 coding (opencode) gpt-oss:120b
+12:29:01 coding (pi) metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+12:40:18 coding (opencode) metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+12:57:16 coding (pi) nemotron-3.5-lightning
+13:08:25 coding (opencode) nemotron-3.5-lightning
+13:31:06 time to first token
+13:47:11 done
