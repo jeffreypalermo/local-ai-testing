@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"qwen3.8-flash-next:q4_k_m","262144",,"262144","80.5","100","30.4","6.49","23.3","251336","617","10.2","6.8","False","True","7-ALPHA-4419","True"

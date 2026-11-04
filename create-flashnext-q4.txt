@@ -1,0 +1,24 @@
+12:28:41 C: free 1048 GB
+12:28:41 ollama ollama version is 0.40.14
+12:28:41 creating qwen3.8-flash-next:q4_k_m (4 shard FROM lines)
+12:35:58   copying file sha256:93b626330052cbfbdddc19b4e9d16da7c09eeef9974a7738bad644fb0dfb2177 100% [K
+12:35:58   copying file sha256:96e3ba02eca2c4a3fd529560103160021066181575ab411db63dcd8499f9e650 100% [K
+12:35:58   copying file sha256:07f3a5593064a05ef6d03f88bce6ea4a52074124fa222a5b19a8807b52991119 100% [K
+12:35:58   parsing GGUF [K[?25h[?2026l
+12:35:58   Error: template error: template: :5: function "content" not defined
+12:35:58 ollama create exit 1
+12:35:58 show failed: {"error":"model 'qwen3.8-flash-next:q4_k_m' not found"}
+12:35:59 C: free 969 GB
+12:35:59 done
+12:36:17 C: free 969 GB
+12:36:17 ollama ollama version is 0.40.14
+12:36:17 creating qwen3.8-flash-next:q4_k_m (4 shard FROM lines)
+12:41:23   using existing layer sha256:07f3a5593064a05ef6d03f88bce6ea4a52074124fa222a5b19a8807b52991119 [K
+12:41:23   using existing layer sha256:9881c02403cd665a11b4d98dfc7bdd37e0c82b77c0c23e6b94797bb6036cfe85 [K
+12:41:23   using existing layer sha256:f6417cb1e26962991f8e875a93f3cb0f92bc9b4955e004881251ccbf934a19d2 [K
+12:41:23   writing manifest [K
+12:41:23   success [K[?25h[?2026l
+12:41:23 ollama create exit 0
+12:41:24 capabilities: tools, thinking, completion, vision; params: 176943899520; context: 262144
+12:41:24 C: free 969 GB
+12:41:24 done

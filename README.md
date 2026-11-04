@@ -26,6 +26,7 @@ Which local models are worth using for agentic coding (with the [pi](https://pi.
 |---|---|---|---|---|---|---|
 | **nemotron-3.5-super:120b-a12b** | **4/4** | **4/4** | **1M** | 8.6 s / 65 s / 272 s | 37 tok/s | 85.8 GB |
 | **qwen3.8:27b** | **4/4** | **4/4** | 262K | 6.6 s / 56 s / 321 s | 24 tok/s | 18.6 GB |
+| qwen3.8-flash-next:q4_k_m (bartowski Q4_K_M)† | 4/4 | 4/4 | 262K | 5.9 s / 53 s / 223 s | 32 tok/s | 80.5 GB |
 | metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL | 4/4 | 4/4 | 262K | 5.5 s / 51 s / 212 s | 31 tok/s | 58.6 GB |
 | gpt-oss:120b | 4/4 | 3/4 | 128K | 2.2 s / 23 s / not run* | 37 tok/s | 60.2 GB |
 | nemotron-3.5-lightning | 2/4, then 3/4 on retest | 2/4, then 4/4 on a second run | 1M | 1.3 s / 15 s / 73 s | 96 tok/s | 26.6 GB |
@@ -33,6 +34,10 @@ Which local models are worth using for agentic coding (with the [pi](https://pi.
 | gemma4:31b-it-q8_0 | 3/4 | not run | 262K | not run | 8 tok/s | 33.5 GB |
 
 \*A 128K prompt plus the answer doesn't fit in gpt-oss's 128K limit. Its long-context test read prompts at about 840 tok/s at 128K, which suggests a first token in roughly 150 s.
+
+†Tested 2026-11-04, after the rest. The 4-bit build matched the 3-bit one on every test and finished the coding tasks faster: 6.9 vs 7.7 minutes in pi, and 9.6 vs 13.6 in opencode. Speeds are within a few percent of each other. It uses 22 GB more memory but still fits fully on the GPU at 262K. Both builds load about 33 GB less than their file size (119.7 GB and about 90 GB), which suggests the 51B N-gram embedding is held outside the reported GPU allocation.
+
+How it was built ([get-flashnext-q4.ps1](get-flashnext-q4.ps1), [create-flashnext-q4.ps1](create-flashnext-q4.ps1)): `ollama pull` refuses sharded Hugging Face GGUFs, so the 4 shards and the mmproj file were downloaded with curl. The Modelfile needs one `FROM` line per shard, and no `TEMPLATE`, so Ollama uses the Jinja chat template embedded in the GGUF. Tests: [flashnext-q4-eval.ps1](flashnext-q4-eval.ps1).
 
 Generation speed is for a short prompt; it drops as the context fills. Raw data: [agent-results.csv](agent-results.csv), [agent-results-lightning-retest.csv](agent-results-lightning-retest.csv), `ctx-*.csv` and [ttft-results.csv](ttft-results.csv).
 
@@ -43,12 +48,13 @@ Generation speed is for a short prompt; it drops as the context fills. Raw data:
 - **gemma4:31b bf16**: too slow to finish tasks in time, so it was replaced by q8.
 - **qwen2.5-14b-1m**: dropped before testing as outdated.
 
-**Out of reach on 110 GB:** Kimi K2 (210 GB or more). DeepSeek V4 and Qwen 3.8 Flash-Next fit only as 2–3-bit community builds.
+**Out of reach on 110 GB:** Kimi K2 (210 GB or more). DeepSeek V4 fits only as a 2-bit community build. Qwen 3.8 Flash-Next fits as a 3-bit or 4-bit community build.
 
 ## Recommendations
 
 - **Best overall, any context: Qwen 3.8 27B.** 8/8, the fastest task times among the models that passed everything, and the smallest footprint. It's slow to start answering on big prompts.
 - **Best when you need a big context: Nemotron 3.5 Super.** 8/8 at 1M tokens, fully on the GPU. This is the default in the daily setup.
+- **Qwen 3.8 Flash-Next: use the 4-bit build.** 8/8 like the 3-bit build, with less quantization loss, faster task times and the same speed. Its only cost is memory, which doesn't matter while one model is loaded at a time.
 - **Snappiest: gpt-oss-120b.** The quickest to respond, but it missed one bug in opencode.
 - **Fastest on huge prompts: Nemotron 3.5 Lightning.** By far the fastest at reading prompts and generating, but it sometimes gets stuck on the CSV parser task.
 

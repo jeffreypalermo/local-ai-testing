@@ -78,3 +78,11 @@
 "gpt-oss:120b","opencode","cs-feature","True","2.3","False","11 pass / 0 fail",""
 "gpt-oss:120b","opencode","py-bugfix","True","0.9","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
 "gpt-oss:120b","opencode","py-feature","True","2","False","Ran 7 tests in 0.188s OK","Ran 7 tests in 0.188s OK"
+"qwen3.8-flash-next:q4_k_m","pi","cs-bugfix","True","3.2","False","8 pass / 0 fail",""
+"qwen3.8-flash-next:q4_k_m","pi","cs-feature","True","1.4","False","11 pass / 0 fail",""
+"qwen3.8-flash-next:q4_k_m","pi","py-bugfix","True","0.8","False","Ran 6 tests in 0.005s OK","Ran 6 tests in 0.005s OK"
+"qwen3.8-flash-next:q4_k_m","pi","py-feature","True","1.5","False","Ran 7 tests in 0.275s OK","Ran 7 tests in 0.275s OK"
+"qwen3.8-flash-next:q4_k_m","opencode","cs-bugfix","True","4.3","False","8 pass / 0 fail",""
+"qwen3.8-flash-next:q4_k_m","opencode","cs-feature","True","2.4","False","11 pass / 0 fail",""
+"qwen3.8-flash-next:q4_k_m","opencode","py-bugfix","True","0.6","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"qwen3.8-flash-next:q4_k_m","opencode","py-feature","True","2.3","False","Ran 7 tests in 0.221s OK","Ran 7 tests in 0.221s OK"

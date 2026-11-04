@@ -1,0 +1,12 @@
+10:15:19 downloading 5 files, 120.5 GB, to C:\Users\JeffreyPalermo\models\Qwen3.8-Flash-Next-Q4_K_M
+10:17:02 downloading 5 files, 120.5 GB, to C:\Users\JeffreyPalermo\models\Qwen3.8-Flash-Next-Q4_K_M
+10:46:37 parallel downloads finished; verifying
+10:46:37 ok Qwen3.8-Flash-Next-Q4_K_M/Qwen3.8-Flash-Next-Q4_K_M-00001-of-00004.gguf
+10:46:37 ok Qwen3.8-Flash-Next-Q4_K_M/Qwen3.8-Flash-Next-Q4_K_M-00002-of-00004.gguf
+10:46:37 ok Qwen3.8-Flash-Next-Q4_K_M/Qwen3.8-Flash-Next-Q4_K_M-00003-of-00004.gguf
+10:46:37 ok Qwen3.8-Flash-Next-Q4_K_M/Qwen3.8-Flash-Next-Q4_K_M-00004-of-00004.gguf
+10:46:37 ok mmproj-Qwen3.8-Flash-Next-f16.gguf
+10:46:37 creating qwen3.8-flash-next:q4_k_m
+10:51:01 ollama create exit 1
+10:51:01 capabilities: ; params: ; context: 
+10:51:01 done
