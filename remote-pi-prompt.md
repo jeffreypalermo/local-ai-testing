@@ -14,7 +14,7 @@ Set up and start my local-AI coding tests on this Windows computer. Run each com
    if (Test-Path C:\src\local-ai-testing) { git -C C:\src\local-ai-testing pull } else { git clone https://github.com/jeffreypalermo/local-ai-testing.git C:\src\local-ai-testing }
 
 3. Check the server: (Invoke-RestMethod http://192.168.1.66:11434/api/tags).models.name
-   It should list nemotron-3.5-super:120b-a12b, qwen3.8:27b, gpt-oss:120b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL and nemotron-3.5-lightning.
+   It should list nemotron-3.5-super:120b-a12b, qwen3.8:27b, gpt-oss:120b, qwen3.8-flash-next:q4_k_m and nemotron-3.5-lightning.
 
 4. Install the test copies of pi and opencode. They go in their own folder and don't touch my setup:
    powershell -NoProfile -ExecutionPolicy Bypass -File C:\src\local-ai-testing\install-harnesses.ps1

@@ -1,0 +1,48 @@
+swap 2026-11-04T14:23:42
+C:\Users\JeffreyPalermo\.pi\agent\models.json : replaced 1 occurrence(s); backup C:\Users\JeffreyPalermo\.pi\agent\models.json.pre-q4.bak
+C:\Users\JeffreyPalermo\.config\opencode\opencode.jsonc : replaced 2 occurrence(s); backup C:\Users\JeffreyPalermo\.config\opencode\opencode.jsonc.pre-q4.bak
+== pi --list-models
+  provider  model                                             context  max-out  thinking  images
+  ollama    frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs  1.0M     16.4K    no        no    
+  ollama    gemma4:31b-it-q8_0                                262.1K   16.4K    no        no    
+  ollama    gpt-oss:120b                                      131.1K   16.4K    no        no    
+  ollama    nemotron-3.5-lightning                            1.0M     16.4K    no        no    
+  ollama    nemotron-3.5-super:120b-a12b                      1.0M     16.4K    no        no    
+  ollama    qwen3.8-flash-next:q4_k_m                         262.1K   16.4K    no        no    
+  ollama    qwen3.8:27b                                       262.1K   16.4K    no        no    
+== opencode models
+  opencode/beam-free
+  opencode/big-pickle
+  opencode/crouton-alpha-free
+  opencode/deepseek-v4.1-flash-free
+  opencode/flint-40b-free
+  opencode/glm-5.3-flash-free
+  opencode/mimo-v2.6-flash-free
+  opencode/nemotron-3.5-lightning-free
+  opencode/nemotron-3.5-super-vl-free
+  opencode/pulse-alpha-free
+  ollama/frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs
+  ollama/gemma4:31b-it-q8_0
+  ollama/gpt-oss:120b
+  ollama/nemotron-3.5-lightning
+  ollama/nemotron-3.5-super:120b-a12b
+  ollama/qwen3.8-flash-next:q4_k_m
+  ollama/qwen3.8:27b
+== pi with qwen3.8-flash-next:q4_k_m
+  Created `hello.py`:
+  
+  ```python
+  print('hi')
+  ```
+  
+  **Output:** `hi`
+pi exit 0 in 177s; hello.py exists: True
+== opencode with qwen3.8-flash-next:q4_k_m
+  [0m
+  > build -+ qwen3.8-flash-next:q4_k_m
+  [0m
+  OPENCODE_OK
+opencode exit 0 in 40s
+== loaded
+  qwen3.8-flash-next:q4_k_m ctx=262144 gpu=100%
+done

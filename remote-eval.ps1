@@ -9,7 +9,7 @@
 param(
     [string]$Url = 'http://192.168.1.66:11434',
     [string[]]$Models = @('nemotron-3.5-super:120b-a12b', 'qwen3.8:27b', 'gpt-oss:120b',
-                          'metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL', 'nemotron-3.5-lightning'),
+                          'qwen3.8-flash-next:q4_k_m', 'nemotron-3.5-lightning'),
     [string[]]$Harnesses = @('pi', 'opencode'),
     [string[]]$Tasks = @('cs-bugfix', 'cs-feature', 'py-bugfix', 'py-feature'),
     [switch]$SkipTtft,
@@ -41,7 +41,7 @@ if (-not $SkipTtft) {
 if ($Context) {
     # Largest context each model passed on the server itself.
     $max = @{ 'nemotron-3.5-super:120b-a12b' = 1048576; 'nemotron-3.5-lightning' = 1048576; 'gpt-oss:120b' = 131072
-              'qwen3.8:27b' = 262144; 'metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL' = 262144
+              'qwen3.8:27b' = 262144; 'metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL' = 262144; 'qwen3.8-flash-next:q4_k_m' = 262144
               'frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs' = 1048576; 'gemma4:31b-it-q8_0' = 262144 }
     foreach ($m in $Models) {
         $file = "$out\ctx-$(Slug $m).csv"

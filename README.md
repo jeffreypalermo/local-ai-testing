@@ -64,7 +64,7 @@ All of these rest on 8 runs per model, so a difference of a minute or two in tas
 
 - [setup-daily.ps1](setup-daily.ps1) sets Ollama's default context to 1M, which Ollama caps at each model's own limit.
   - It runs the Ollama app's server, which has "Expose to network" on.
-  - It writes pi and opencode configs with 7 models, defaulting to Nemotron Super.
+  - It writes pi and opencode configs with 7 models, defaulting to Nemotron Super. Since 2026-11-04 the Flash-Next entry is the 4-bit build; [swap-flashnext.ps1](swap-flashnext.ps1) made that change in configs that already existed.
 - [remote-setup-prompt.md](remote-setup-prompt.md) is a prompt for setting up pi and opencode on another computer to use this server over the LAN.
 - [remote-csv-task-setup.md](remote-csv-task-setup.md) is a prompt for recreating the CSV-parser task on another computer, so you can run it by hand.
 
