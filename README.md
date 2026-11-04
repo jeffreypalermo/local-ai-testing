@@ -67,6 +67,7 @@ All of these rest on 8 runs per model, so a difference of a minute or two in tas
 [remote-eval.ps1](remote-eval.ps1) runs the coding tests in pi and opencode, plus the time-to-first-token test, from another Windows computer against the Ollama server at `http://192.168.1.66:11434`. The models run on the server; the agents, builds and tests run locally. Results go to `results-<computer name>\`.
 
 - **Prompt for an agent:** [remote-testing-prompt.md](remote-testing-prompt.md) walks a coding agent on the other computer through the prerequisites, a smoke test, the full run and a comparison with the results above.
+- **Prompts for pi on that computer:** [remote-pi-prompt.md](remote-pi-prompt.md) has one prompt to start the run and one to report the results. pi only starts the run, because checking on it would swap pi's own model onto the shared server and skew the timings.
 - **Any server:** `agent-eval.ps1`, `bench.ps1` and `ttft.ps1` use the address in `LLM_EVAL_OLLAMA_URL`, or `http://127.0.0.1:11434` if it's unset.
 - **Isolated harnesses:** [install-harnesses.ps1](install-harnesses.ps1) installs pinned copies (pi 1.5.0 and opencode 1.19.5) with their own config folder, so pi or opencode already set up on that computer isn't touched.
 
