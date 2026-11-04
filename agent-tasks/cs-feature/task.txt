@@ -1,0 +1,1 @@
+﻿Implement Csv.Parse in src/Csv.cs according to its doc comment. Run the tests with `dotnet run --project tests`. Do not modify the tests. Stop when all tests pass.

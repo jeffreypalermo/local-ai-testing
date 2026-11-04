@@ -1,0 +1,2 @@
+"model","task","pass","minutes","timed_out","checks","detail"
+"qwen3-coder-next:q8_0","cs-bugfix","False","0.2","False","3 pass / 5 fail","FAIL SAVE10 lowercase FAIL SAVE10 uppercase FAIL BULK50 at exactly 500 FAIL HALF capped at 100"

@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"gpt-oss:120b","131072",,"131072","60.2","100","48.6","6.48","3.9","125451","841","13.8","2.6","False","True","7-ALPHA-4419","True"

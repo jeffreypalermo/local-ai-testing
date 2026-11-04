@@ -1,0 +1,133 @@
+13:47:03 server 0.40.14
+13:47:04 coding eval nemotron-3.5-lightning (long ctx 500000)
+13:47:06 pull nemotron-3.5-lightning exit=0
+13:47:07 pull nemotron-3-nano exit=0
+13:47:08 pull qwen3.8:27b exit=0
+13:47:09 pull bjoernb/qwen3-coder-30b-1m exit=0
+13:49:42 pull org/qwen2.5-1m:14b exit=0
+13:49:44 pull gemma4:31b-it-bf16 exit=0
+14:34:14 server 0.40.14
+14:34:15 coding eval nemotron-3.5-lightning (long ctx 500000)
+14:34:16 pull nemotron-3.5-lightning exit=0
+14:34:17 pull nemotron-3-nano exit=0
+14:34:18 pull qwen3.8:27b exit=0
+14:34:19 pull bjoernb/qwen3-coder-30b-1m exit=0
+14:34:19 pull org/qwen2.5-1m:14b exit=0
+14:34:20 pull gemma4:31b-it-bf16 exit=0
+14:34:21 pull qwen3-coder-next:q8_0 exit=0
+14:54:03 done nemotron-3.5-lightning
+14:54:03 coding eval nemotron-3-nano (long ctx 500000)
+15:02:40 pull devstral-2:123b-instruct-2512-q4_K_M exit=1
+15:02:41 pull nemotron-3.5-super:120b-a12b exit=1
+15:02:41 pull metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL exit=1
+15:02:42 pull frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs exit=1
+---- restart with agent eval ----
+16:09:38 server 0.40.14
+16:09:39 agent eval nemotron-3.5-lightning
+16:09:40 pull nemotron-3.5-lightning exit=0
+16:09:41 pull nemotron-3-nano exit=0
+16:09:42 pull qwen3.8:27b exit=0
+16:09:43 pull bjoernb/qwen3-coder-30b-1m exit=0
+16:09:44 pull org/qwen2.5-1m:14b exit=0
+16:09:45 pull gemma4:31b-it-bf16 exit=0
+16:09:46 pull qwen3-coder-next:q8_0 exit=0
+16:09:48 done nemotron-3.5-lightning
+16:09:48 agent eval nemotron-3-nano
+16:09:58 done nemotron-3-nano
+16:09:58 agent eval qwen3.8:27b
+16:10:08 done qwen3.8:27b
+16:10:08 context sweep bjoernb/qwen3-coder-30b-1m
+16:19:05 server 0.40.14
+16:19:05 agent eval nemotron-3.5-lightning
+16:19:07 pull nemotron-3.5-lightning exit=0
+16:19:08 pull nemotron-3-nano exit=0
+16:19:09 pull qwen3.8:27b exit=0
+16:19:11 pull bjoernb/qwen3-coder-30b-1m exit=0
+16:19:12 pull org/qwen2.5-1m:14b exit=0
+16:19:12 pull gemma4:31b-it-bf16 exit=0
+16:19:13 pull qwen3-coder-next:q8_0 exit=0
+16:25:33 pull devstral-2:123b-instruct-2512-q4_K_M exit=1
+16:25:34 pull nemotron-3.5-super:120b-a12b exit=1
+16:25:35 pull metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL exit=1
+16:25:35 pull frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs exit=1
+16:54:14 done nemotron-3.5-lightning
+16:54:14 agent eval nemotron-3-nano
+17:23:12 server 0.40.14
+17:23:12 agent eval nemotron-3.5-lightning (pi)
+17:23:12 agent eval nemotron-3.5-lightning (opencode)
+17:55:43 done nemotron-3.5-lightning
+17:55:43 agent eval nemotron-3-nano (pi)
+18:18:21 agent eval nemotron-3-nano (opencode)
+18:30:37 done nemotron-3-nano
+18:30:37 agent eval qwen3.8:27b (pi)
+18:37:11 agent eval qwen3.8:27b (opencode)
+18:47:31 done qwen3.8:27b
+18:47:31 context sweep bjoernb/qwen3-coder-30b-1m
+19:16:09 server 0.40.14
+19:16:09 agent eval nemotron-3.5-lightning (pi)
+19:16:09 agent eval nemotron-3.5-lightning (opencode)
+19:33:54 done nemotron-3.5-lightning
+19:33:54 agent eval nemotron-3-nano (pi)
+19:33:55 agent eval nemotron-3-nano (opencode)
+19:33:55 done nemotron-3-nano
+19:33:55 agent eval qwen3.8:27b (pi)
+19:33:55 agent eval qwen3.8:27b (opencode)
+19:33:55 done qwen3.8:27b
+19:33:55 context sweep qwen3-coder:30b-a3b-q8_0
+19:53:51 agent eval qwen3-coder:30b-a3b-q8_0 (pi)
+20:15:01 agent eval qwen3-coder:30b-a3b-q8_0 (opencode)
+20:29:46 done qwen3-coder:30b-a3b-q8_0
+20:29:46 context sweep org/qwen2.5-1m:14b
+20:53:52 server 0.40.14
+20:53:52 context sweep above 500K nemotron-3.5-lightning
+21:07:40 gate (pi) gemma4:31b-it-bf16
+21:48:39 gate (pi) qwen3-coder-next:q8_0
+21:50:10 gate (pi) qwen3-coder-next:q8_0
+22:19:12 gate (pi) devstral-2:123b-instruct-2512-q4_K_M
+23:00:21 gate (pi) nemotron-3.5-super:120b-a12b
+23:13:16 gate (pi) metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+23:21:10 gate (pi) frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs
+23:29:59 gate (pi) gemma4:31b-it-q8_0
+00:06:17 survivors: nemotron-3.5-lightning, qwen3.8:27b, nemotron-3.5-super:120b-a12b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL, frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs, gemma4:31b-it-q8_0
+00:06:17 context sweep nemotron-3.5-lightning from 1048576
+00:44:18 context sweep nemotron-3.5-super:120b-a12b from 1048576
+01:55:08 context sweep metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL from 262144
+02:05:01 context sweep frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs from 1048576
+04:37:04 context sweep gemma4:31b-it-q8_0 from 262144
+04:58:29 finalists: nemotron-3.5-super:120b-a12b, nemotron-3.5-lightning, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+04:58:29 opencode nemotron-3.5-super:120b-a12b
+05:13:25 opencode nemotron-3.5-lightning
+05:13:29 opencode metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+05:27:17 narrowing done
+05:27:58 gate (pi) qwen3-coder-next:q8_0
+05:27:58 gate (pi) devstral-2:123b-instruct-2512-q4_K_M
+05:27:58 gate (pi) nemotron-3.5-super:120b-a12b
+05:27:58 gate (pi) metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+05:27:58 gate (pi) frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs
+05:27:58 gate (pi) gemma4:31b-it-q8_0
+05:27:58 gate (pi) gpt-oss:120b
+05:33:46 survivors: nemotron-3.5-lightning, qwen3.8:27b, nemotron-3.5-super:120b-a12b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL, frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs, gemma4:31b-it-q8_0, gpt-oss:120b
+05:33:46 context sweep gpt-oss:120b from 131072
+05:39:27 finalists: nemotron-3.5-super:120b-a12b, nemotron-3.5-lightning, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+05:39:27 opencode nemotron-3.5-super:120b-a12b
+05:39:27 opencode nemotron-3.5-lightning
+05:39:27 opencode metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+05:39:27 ttft
+06:01:13 gate (pi) qwen3-coder-next:q8_0
+06:01:14 gate (pi) devstral-2:123b-instruct-2512-q4_K_M
+06:01:14 gate (pi) nemotron-3.5-super:120b-a12b
+06:01:14 gate (pi) metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+06:01:14 gate (pi) frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs
+06:01:14 gate (pi) gemma4:31b-it-q8_0
+06:01:14 gate (pi) gpt-oss:120b
+06:01:14 survivors: nemotron-3.5-lightning, qwen3.8:27b, nemotron-3.5-super:120b-a12b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL, frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs, gemma4:31b-it-q8_0, gpt-oss:120b
+06:01:14 finalists: nemotron-3.5-lightning, qwen3.8:27b, nemotron-3.5-super:120b-a12b, metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL, gpt-oss:120b
+06:01:14 opencode nemotron-3.5-lightning
+06:01:14 opencode qwen3.8:27b
+06:01:14 opencode nemotron-3.5-super:120b-a12b
+06:01:14 opencode metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL
+06:01:14 opencode gpt-oss:120b
+06:08:23 ttft
+06:09:22 narrowing done
+06:09:44 context retest gpt-oss:120b
+06:13:22 context retest gpt-oss done

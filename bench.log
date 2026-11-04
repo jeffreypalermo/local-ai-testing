@@ -1,0 +1,124 @@
+﻿== nemotron-3.5-lightning @ 500000
+
+
+model           : nemotron-3.5-lightning
+num_ctx         : 500000
+error           : 
+loaded_ctx      : 500000
+size_gb         : 26.6
+gpu_pct         : 100
+gen_tok_s       : 27.2
+chars_per_token : 6.31
+ram_delta_gb    : 28.9
+prompt_tokens   : 479448
+prefill_tok_s   : 319
+long_gen_tok_s  : 20.6
+wall_min        : 25.1
+truncated       : False
+needle_found    : True
+answer          : 7-ALPHA-4419
+pass            : True
+
+
+
+-> max working context for nemotron-3.5-lightning: 500000
+== nemotron-3-nano @ 500000
+
+
+model           : nemotron-3-nano
+num_ctx         : 500000
+error           : 
+loaded_ctx      : 500000
+size_gb         : 26.5
+gpu_pct         : 100
+gen_tok_s       : 30.2
+chars_per_token : 6.31
+ram_delta_gb    : 26
+prompt_tokens   : 479464
+prefill_tok_s   : 556
+long_gen_tok_s  : 9.6
+wall_min        : 14.6
+truncated       : False
+needle_found    : True
+answer          : 7-ALPHA-4419
+pass            : True
+
+
+
+-> max working context for nemotron-3-nano: 500000
+== qwen3.8:27b @ 500000
+
+
+model           : qwen3.8:27b
+num_ctx         : 500000
+error           : 
+loaded_ctx      : 262144
+size_gb         : 18.6
+gpu_pct         : 100
+gen_tok_s       : 6.7
+chars_per_token : 6.49
+ram_delta_gb    : 30.1
+prompt_tokens   : 131074
+prefill_tok_s   : 237
+long_gen_tok_s  : 7.6
+wall_min        : 9.5
+truncated       : True
+needle_found    : False
+answer          : The provided text does not contain any information about "Project Heron" or a "secret launch code." 
+                  It consists solely of repeated sentences about weather, engineering maintenance, library hours, 
+                  supply contracts, and a logistics report.
+pass            : False
+
+
+
+== qwen3.8:27b @ 393216
+
+
+model           : qwen3.8:27b
+num_ctx         : 393216
+error           : 
+loaded_ctx      : 262144
+size_gb         : 18.6
+gpu_pct         : 100
+gen_tok_s       : 7.4
+chars_per_token : 6.49
+ram_delta_gb    : 26.4
+prompt_tokens   : 131074
+prefill_tok_s   : 362
+long_gen_tok_s  : 12.1
+wall_min        : 6.1
+truncated       : True
+needle_found    : False
+answer          : The provided text does not contain any information about "Project Heron" or a launch code. It 
+                  consists solely of repeated sentences about fog, bearing replacements, library hours, supply 
+                  contracts, and logistics reports.
+pass            : False
+
+
+
+== qwen3.8:27b @ 262144
+
+
+model           : qwen3.8:27b
+num_ctx         : 262144
+error           : 
+loaded_ctx      : 262144
+size_gb         : 18.6
+gpu_pct         : 100
+gen_tok_s       : 19.1
+chars_per_token : 6.49
+ram_delta_gb    : 28.3
+prompt_tokens   : 251336
+prefill_tok_s   : 326
+long_gen_tok_s  : 13.1
+wall_min        : 12.9
+truncated       : False
+needle_found    : True
+answer          : 7-ALPHA-4419
+pass            : True
+
+
+
+-> max working context for qwen3.8:27b: 262144
+Saved C:\Users\JeffreyPalermo\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\f25599b4-be12-4597-84ae
+-5ff47e832731\97e692af-41e9-4415-abb0-e33ad686ec50\scratch-2026-11-03-36dd77\results.csv

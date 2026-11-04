@@ -1,0 +1,1 @@
+﻿The tests in this repo are failing. Run them with `python -m unittest discover -s tests -t .`, find the bugs in pager/core.py, and fix them. Do not modify the tests. Stop when all tests pass.

@@ -1,0 +1,116 @@
+{
+    "$schema":  "https://pi.dev/schemas/models.schema.json",
+    "providers":  {
+                      "ollama":  {
+                                     "baseUrl":  "http://127.0.0.1:11434/v1",
+                                     "api":  "openai-completions",
+                                     "apiKey":  "ollama",
+                                     "models":  [
+                                                    {
+                                                        "id":  "nemotron-3.5-lightning",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "nemotron-3-nano",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "qwen3.8:27b",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "qwen3-coder:30b-a3b-q8_0",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "org/qwen2.5-1m:14b",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "gemma4:31b-it-bf16",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "qwen3-coder-next:q8_0",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "devstral-2:123b-instruct-2512-q4_K_M",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "nemotron-3.5-super:120b-a12b",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "gemma4:31b-it-q8_0",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    },
+                                                    {
+                                                        "id":  "gpt-oss:120b",
+                                                        "contextWindow":  65536,
+                                                        "maxTokens":  16384,
+                                                        "input":  [
+                                                                      "text"
+                                                                  ]
+                                                    }
+                                                ]
+                                 }
+                  }
+}

@@ -1,0 +1,7 @@
+qwen3-coder-next:q8_0                         cs-bugfix   FAIL    0.2 min  3 pass / 5 fail
+
+model                 passed total minutes
+-----                 ------ ----- -------
+qwen3-coder-next:q8_0      0     1     0.2
+
+

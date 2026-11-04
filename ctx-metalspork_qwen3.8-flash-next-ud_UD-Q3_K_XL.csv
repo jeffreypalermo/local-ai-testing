@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","262144",,"262144","58.6","100","35.3","6.49","31.1","251336","537","10.5","7.9","False","True","7-ALPHA-4419","True"

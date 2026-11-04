@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"nemotron-3.5-lightning","1048576",,"1048576","26.6","100","78.5","6.31","4.1","1005619","451","26.4","37.4","False","True","7-ALPHA-4419","True"

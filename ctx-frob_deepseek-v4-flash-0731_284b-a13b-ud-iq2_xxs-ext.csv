@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs","1048576",,"1048576","86.6","100","23","6.49","29.9","1005808","113","6.6","149.1","False","True","7-ALPHA-4419","True"

@@ -1,0 +1,1 @@
+﻿The test suite in this repo is failing: customers report coupon codes do not work correctly. Run the tests with `dotnet run --project tests`, find the bugs in src/, and fix them. Do not modify the tests. Stop when all tests pass.

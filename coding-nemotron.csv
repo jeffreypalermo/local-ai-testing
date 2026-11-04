@@ -1,0 +1,4 @@
+"model","task","pass","seconds","tok_s","log"
+"nemotron-3.5-lightning","cs-parens","True","95.5","82.4",""
+"nemotron-3.5-lightning","cs-merge","True","29.1","80.7",""
+"nemotron-3.5-lightning","cs-roman","True","19.7","87.5",""

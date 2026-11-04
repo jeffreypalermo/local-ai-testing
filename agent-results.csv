@@ -1,0 +1,80 @@
+"model","harness","task","pass","minutes","timed_out","checks","detail"
+"nemotron-3.5-lightning","pi","cs-bugfix","True","1.7","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","pi","cs-feature","True","15.7","False","11 pass / 0 fail",""
+"nemotron-3.5-lightning","pi","py-bugfix","True","0.6","False","Ran 6 tests in 0.002s OK","Ran 6 tests in 0.002s OK"
+"nemotron-3.5-lightning","pi","py-feature","False","15","True","",""
+"nemotron-3-nano","pi","cs-bugfix","True","5","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","opencode","cs-bugfix","True","3.4","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","opencode","cs-feature","False","4.7","False","0 pass / 0 fail","EXCEPTION NotImplementedException: The method or operation is not implemented."
+"nemotron-3.5-lightning","opencode","py-bugfix","True","1.9","False","Ran 6 tests in 0.005s OK","Ran 6 tests in 0.005s OK"
+"nemotron-3.5-lightning","opencode","py-feature","True","22.3","False","Ran 7 tests in 0.206s OK","Ran 7 tests in 0.206s OK"
+"nemotron-3-nano","pi","cs-feature","False","15","True","0 pass / 0 fail",""
+"nemotron-3-nano","pi","py-bugfix","True","0.9","False","Ran 6 tests in 0.001s OK","Ran 6 tests in 0.001s OK"
+"nemotron-3-nano","pi","py-feature","True","1.7","False","Ran 7 tests in 0.175s OK","Ran 7 tests in 0.175s OK"
+"nemotron-3-nano","opencode","cs-bugfix","False","0.6","False","3 pass / 5 fail","FAIL SAVE10 lowercase FAIL SAVE10 uppercase FAIL BULK50 at exactly 500 FAIL HALF capped at 100"
+"nemotron-3-nano","opencode","cs-feature","False","7.1","False","0 pass / 0 fail","EXCEPTION NotImplementedException: The method or operation is not implemented."
+"nemotron-3-nano","opencode","py-bugfix","True","1.4","False","Ran 6 tests in 0.003s OK","Ran 6 tests in 0.003s OK"
+"nemotron-3-nano","opencode","py-feature","True","3","False","Ran 7 tests in 0.225s OK","Ran 7 tests in 0.225s OK"
+"qwen3.8:27b","pi","cs-bugfix","True","1.3","False","8 pass / 0 fail",""
+"qwen3.8:27b","pi","cs-feature","True","1.8","False","11 pass / 0 fail",""
+"qwen3.8:27b","pi","py-bugfix","True","0.7","False","Ran 6 tests in 0.002s OK","Ran 6 tests in 0.002s OK"
+"qwen3.8:27b","pi","py-feature","True","2.7","False","Ran 7 tests in 0.267s OK","Ran 7 tests in 0.267s OK"
+"qwen3.8:27b","opencode","cs-bugfix","True","1.2","False","8 pass / 0 fail",""
+"qwen3.8:27b","opencode","cs-feature","True","3.4","False","11 pass / 0 fail",""
+"qwen3.8:27b","opencode","py-bugfix","True","0.6","False","Ran 6 tests in 0.006s OK","Ran 6 tests in 0.006s OK"
+"qwen3.8:27b","opencode","py-feature","True","4.9","False","Ran 7 tests in 0.202s OK","Ran 7 tests in 0.202s OK"
+"nemotron-3.5-lightning","opencode","cs-bugfix","True","2.6","False","8 pass / 0 fail",""
+"nemotron-3.5-lightning","opencode","cs-feature","True","1.3","False","11 pass / 0 fail",""
+"nemotron-3.5-lightning","opencode","py-bugfix","True","4.1","False","Ran 6 tests in 0.005s OK","Ran 6 tests in 0.005s OK"
+"nemotron-3.5-lightning","opencode","py-feature","True","9.5","False","Ran 7 tests in 0.153s OK","Ran 7 tests in 0.153s OK"
+"qwen3-coder:30b-a3b-q8_0","pi","cs-bugfix","True","2","False","8 pass / 0 fail",""
+"qwen3-coder:30b-a3b-q8_0","pi","cs-feature","True","2","False","11 pass / 0 fail",""
+"qwen3-coder:30b-a3b-q8_0","pi","py-bugfix","False","0","False","Ran 6 tests in 0.007s FAILED (failures=4)","FAIL: test_exact_multiple (tests.test_pager.PaginateTests.test_exact_multiple) Traceback (most recent call last): AssertionError: True is not false FAIL: test_first_page (tests.test_pager.PaginateTests.test_first_page)"
+"qwen3-coder:30b-a3b-q8_0","pi","py-feature","False","15","True","",""
+"qwen3-coder:30b-a3b-q8_0","opencode","cs-bugfix","True","0.7","False","8 pass / 0 fail",""
+"qwen3-coder:30b-a3b-q8_0","opencode","cs-feature","False","7.2","False","5 pass / 0 fail","EXCEPTION FormatException: Unterminated quoted field"
+"qwen3-coder:30b-a3b-q8_0","opencode","py-bugfix","True","0.6","False","Ran 6 tests in 0.006s OK","Ran 6 tests in 0.006s OK"
+"qwen3-coder:30b-a3b-q8_0","opencode","py-feature","False","4.2","False","",""
+"gemma4:31b-it-bf16","pi","cs-bugfix","True","5.5","False","8 pass / 0 fail",""
+"gemma4:31b-it-bf16","pi","cs-feature","False","15","True","0 pass / 0 fail","EXCEPTION NotImplementedException: The method or operation is not implemented."
+"gemma4:31b-it-bf16","pi","py-bugfix","True","5.5","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"qwen3-coder-next:q8_0","pi","cs-bugfix","True","0.6","False","8 pass / 0 fail",""
+"qwen3-coder-next:q8_0","pi","cs-feature","False","10.7","False","0 pass / 0 fail",""
+"qwen3-coder-next:q8_0","pi","py-bugfix","True","0.6","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"qwen3-coder-next:q8_0","pi","py-feature","False","15","True","",""
+"devstral-2:123b-instruct-2512-q4_K_M","pi","cs-bugfix","False","15","True","3 pass / 5 fail","FAIL SAVE10 lowercase FAIL SAVE10 uppercase FAIL BULK50 at exactly 500 FAIL HALF capped at 100"
+"devstral-2:123b-instruct-2512-q4_K_M","pi","cs-feature","True","6.7","False","11 pass / 0 fail",""
+"devstral-2:123b-instruct-2512-q4_K_M","pi","py-bugfix","True","4.3","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"devstral-2:123b-instruct-2512-q4_K_M","pi","py-feature","False","15","True","Ran 7 tests in 0.011s FAILED (errors=7)","ERROR: test_basic_and_default (tests.test_ttlcache.TTLCacheTests.test_basic_and_default) Traceback (most recent call last):     raise NotImplementedError NotImplementedError"
+"nemotron-3.5-super:120b-a12b","pi","cs-bugfix","True","2.4","False","8 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","pi","cs-feature","True","4","False","11 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","pi","py-bugfix","True","0.6","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"nemotron-3.5-super:120b-a12b","pi","py-feature","True","5.7","False","Ran 7 tests in 0.269s OK","Ran 7 tests in 0.269s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","cs-bugfix","True","2.7","False","8 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","cs-feature","True","2.3","False","11 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","py-bugfix","True","0.8","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","pi","py-feature","True","1.9","False","Ran 7 tests in 0.416s OK","Ran 7 tests in 0.416s OK"
+"frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs","pi","cs-bugfix","True","2.4","False","8 pass / 0 fail",""
+"frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs","pi","cs-feature","True","4.8","False","11 pass / 0 fail",""
+"frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs","pi","py-bugfix","True","1.4","False","Ran 6 tests in 0.005s OK","Ran 6 tests in 0.005s OK"
+"frob/deepseek-v4-flash-0731:284b-a13b-ud-iq2_xxs","pi","py-feature","False","0.1","False","Ran 7 tests in 0.007s FAILED (errors=7)","ERROR: test_basic_and_default (tests.test_ttlcache.TTLCacheTests.test_basic_and_default) Traceback (most recent call last):     raise NotImplementedError NotImplementedError"
+"gemma4:31b-it-q8_0","pi","cs-bugfix","True","5.8","False","8 pass / 0 fail",""
+"gemma4:31b-it-q8_0","pi","cs-feature","False","15","True","0 pass / 0 fail","EXCEPTION NotImplementedException: The method or operation is not implemented."
+"gemma4:31b-it-q8_0","pi","py-bugfix","True","4.9","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"gemma4:31b-it-q8_0","pi","py-feature","True","10.5","False","Ran 7 tests in 0.339s OK","Ran 7 tests in 0.339s OK"
+"nemotron-3.5-super:120b-a12b","opencode","cs-bugfix","True","3.4","False","8 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","opencode","cs-feature","True","4.7","False","11 pass / 0 fail",""
+"nemotron-3.5-super:120b-a12b","opencode","py-bugfix","True","1.2","False","Ran 6 tests in 0.003s OK","Ran 6 tests in 0.003s OK"
+"nemotron-3.5-super:120b-a12b","opencode","py-feature","True","5.6","False","Ran 7 tests in 0.288s OK","Ran 7 tests in 0.288s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","cs-bugfix","True","2.6","False","8 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","cs-feature","True","7.5","False","11 pass / 0 fail",""
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","py-bugfix","True","0.8","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL","opencode","py-feature","True","2.7","False","Ran 7 tests in 0.182s OK","Ran 7 tests in 0.182s OK"
+"gpt-oss:120b","pi","cs-bugfix","True","1.3","False","8 pass / 0 fail",""
+"gpt-oss:120b","pi","cs-feature","True","2.9","False","11 pass / 0 fail",""
+"gpt-oss:120b","pi","py-bugfix","True","0.3","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"gpt-oss:120b","pi","py-feature","True","1.2","False","Ran 7 tests in 0.408s OK","Ran 7 tests in 0.408s OK"
+"gpt-oss:120b","opencode","cs-bugfix","False","1.9","False","7 pass / 1 fail","FAIL BULK50 at exactly 500"
+"gpt-oss:120b","opencode","cs-feature","True","2.3","False","11 pass / 0 fail",""
+"gpt-oss:120b","opencode","py-bugfix","True","0.9","False","Ran 6 tests in 0.004s OK","Ran 6 tests in 0.004s OK"
+"gpt-oss:120b","opencode","py-feature","True","2","False","Ran 7 tests in 0.188s OK","Ran 7 tests in 0.188s OK"

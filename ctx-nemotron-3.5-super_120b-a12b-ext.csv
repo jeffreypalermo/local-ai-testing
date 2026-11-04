@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"nemotron-3.5-super:120b-a12b","1048576",,"1048576","85.8","100","33.3","6.31","36.2","1005619","246","14.1","68.2","False","True","7-ALPHA-4419","True"

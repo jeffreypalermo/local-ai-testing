@@ -1,0 +1,2 @@
+"model","num_ctx","error","loaded_ctx","size_gb","gpu_pct","gen_tok_s","chars_per_token","ram_delta_gb","prompt_tokens","prefill_tok_s","long_gen_tok_s","wall_min","truncated","needle_found","answer","pass"
+"gemma4:31b-it-q8_0","262144",,"262144","33.5","100","7.7","6.49","5.7","251335","214","3.3","19.7","False","True","7-ALPHA-4419","True"

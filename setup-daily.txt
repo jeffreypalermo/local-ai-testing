@@ -1,0 +1,12 @@
+setup 2026-11-04T08:28:01
+env OLLAMA_CONTEXT_LENGTH=1048576
+env OLLAMA_FLASH_ATTENTION=1
+env OLLAMA_KV_CACHE_TYPE=q8_0
+env OLLAMA_MAX_LOADED_MODELS=1
+ollama app server up: True
+reachable at 192.168.1.66:11434: 0.40.14
+pi: wrote C:\Users\JeffreyPalermo\.pi\agent\models.json, settings.json, C:\Users\JeffreyPalermo\AppData\Roaming\npm\pi.cmd
+opencode: wrote C:\Users\JeffreyPalermo\.config\opencode\opencode.jsonc
+loaded gpt-oss:120b: context 131072, 60.2 GB, 100% on GPU
+loaded nemotron-3.5-super:120b-a12b: context 1048576, 85.8 GB, 100% on GPU
+done
