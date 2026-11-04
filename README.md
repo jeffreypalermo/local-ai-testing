@@ -74,6 +74,19 @@ All of these rest on 8 runs per model, so a difference of a minute or two in tas
 
 - **Prompt for an agent:** [remote-testing-prompt.md](remote-testing-prompt.md) walks a coding agent on the other computer through the prerequisites, a smoke test, the full run and a comparison with the results above.
 - **Prompts for pi on that computer:** [remote-pi-prompt.md](remote-pi-prompt.md) has one prompt to start the run and one to report the results. pi only starts the run, because checking on it would swap pi's own model onto the shared server and skew the timings.
+- **First remote run** (2026-11-04, [results-desktop-obs4pvu/](results-desktop-obs4pvu/)): this was a second, independent run of the same tests, over the LAN. It confirmed the rankings.
+
+  | Model | pi | opencode | First token at 4K / 32K / 128K |
+  |---|---|---|---|
+  | nemotron-3.5-super:120b-a12b | 4/4 (14.1 min) | 4/4 (14.2 min) | 7.0 s / 52 s / 224 s |
+  | qwen3.8:27b | 4/4 (5.0 min) | 4/4 (12.5 min) | 5.4 s / 51 s / 323 s |
+  | gpt-oss:120b | 4/4 (3.6 min) | **2/4** (5.6 min) | 2.1 s / 22 s / not run |
+  | metalspork/qwen3.8-flash-next-ud:UD-Q3_K_XL | 4/4 (11.2 min) | 4/4 (16.9 min) | 5.0 s / 50 s / not run |
+  | nemotron-3.5-lightning | **4/4** (11.1 min) | **2/4** (17.4 min) | 1.3 s / 14 s / not run |
+
+  - **gpt-oss in opencode** was weak again. It stopped after a minute on `cs-bugfix` with 5 of 8 checks failing, including the $500 discount boundary it missed in the first run. It also missed CRLF handling without a trailing newline in `cs-feature`.
+  - **Lightning** passed everything in pi this time. In opencode it left the CSV parser unimplemented and failed `py-feature` after 12.9 minutes. Across three runs it's the least consistent model.
+  - **Time to first token** over the network matched or beat the on-server numbers, so the LAN adds nothing noticeable. gpt-oss has no 128K row for the same reason as on the server. The remote run also has no 128K row for Flash-Next or Lightning. Nothing errored, and by the run's total time those two steps never ran; the cause isn't known yet. The server-side numbers above cover them.
 - **Any server:** `agent-eval.ps1`, `bench.ps1` and `ttft.ps1` use the address in `LLM_EVAL_OLLAMA_URL`, or `http://127.0.0.1:11434` if it's unset.
 - **Isolated harnesses:** [install-harnesses.ps1](install-harnesses.ps1) installs pinned copies (pi 1.5.0 and opencode 1.19.5) with their own config folder, so pi or opencode already set up on that computer isn't touched.
 
