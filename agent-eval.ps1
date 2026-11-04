@@ -10,12 +10,20 @@ param(
 )
 
 $taskRoot = "$PSScriptRoot\agent-tasks"
+# Ollama server to test against; set LLM_EVAL_OLLAMA_URL (e.g. http://192.168.1.66:11434) to use a remote one.
+$ollamaUrl = if ($env:LLM_EVAL_OLLAMA_URL) { $env:LLM_EVAL_OLLAMA_URL.TrimEnd('/') } else { 'http://127.0.0.1:11434' }
 $work = "$env:LOCALAPPDATA\llm-eval\agent"   # short path: MSBuild trips MAX_PATH under deep folders
-$pyDir = Split-Path (Get-ChildItem "$env:LOCALAPPDATA\Programs\Python\Python3*\python.exe" | Select-Object -Last 1).FullName
+$pyExe = Get-ChildItem "$env:LOCALAPPDATA\Programs\Python\Python3*\python.exe" -ErrorAction SilentlyContinue | Select-Object -Last 1
+$pyDir = if ($pyExe) { Split-Path $pyExe.FullName } else { Split-Path (Get-Command python -ErrorAction Stop).Source }
 $env:Path = "$pyDir;$env:ProgramFiles\dotnet;$env:ProgramFiles\nodejs;$env:APPDATA\npm;$env:Path"
 $env:DOTNET_CLI_TELEMETRY_OPTOUT = '1'; $env:DOTNET_NOLOGO = '1'; $env:PI_OFFLINE = '1'
 # pi and its config live under %LOCALAPPDATA%\llm-eval so detached processes can see them.
 $env:PI_CODING_AGENT_DIR = "$env:LOCALAPPDATA\llm-eval\pi-agent"
+New-Item -ItemType Directory -Force $env:PI_CODING_AGENT_DIR | Out-Null
+# pi's model list for this run: the models under test on $ollamaUrl, at the 64K agent context used in every run.
+$piModels = @(foreach ($m in $Models) { [ordered]@{ id = $m; contextWindow = 65536; maxTokens = 16384; input = @('text') } })
+$piJson = [ordered]@{ providers = @{ ollama = [ordered]@{ baseUrl = "$ollamaUrl/v1"; api = 'openai-completions'; apiKey = 'ollama'; models = $piModels } } } | ConvertTo-Json -Depth 8
+[IO.File]::WriteAllText("$env:PI_CODING_AGENT_DIR\models.json", $piJson, [Text.UTF8Encoding]::new($false))
 $pi = "$env:LOCALAPPDATA\llm-eval\npm\node_modules\@earendil-works\pi-coding-agent\dist\cli.js"
 $opencode = "$env:LOCALAPPDATA\llm-eval\opencode.exe"   # copied there by install-harnesses.ps1
 if ($Harness -eq 'pi' -and -not (Test-Path $pi)) { throw "pi not found at $pi" }
@@ -30,7 +38,7 @@ function Set-OpencodeConfig($m) {
     $env:OPENCODE_CONFIG_CONTENT = @{
         '$schema' = 'https://opencode.ai/config.json'; autoupdate = $false; share = 'disabled'
         provider = @{ ollama = @{ npm = '@ai-sdk/openai-compatible'; name = 'Ollama'
-                                  options = @{ baseURL = 'http://127.0.0.1:11434/v1' }
+                                  options = @{ baseURL = "$ollamaUrl/v1" }
                                   models = @{ $m = @{ name = $m; tool_call = $true; limit = @{ context = 65536; output = 16384 } } } } }
     } | ConvertTo-Json -Depth 8 -Compress
 }
@@ -99,7 +107,7 @@ foreach ($m in $Models) {
                                  task, pass, minutes, timed_out, checks, detail |
             Export-Csv $Out -NoTypeInformation
     }
-    try { Invoke-RestMethod 'http://127.0.0.1:11434/api/generate' -Method Post -ContentType 'application/json' -Body (@{ model = $m; keep_alive = 0 } | ConvertTo-Json) | Out-Null } catch {}
+    try { Invoke-RestMethod "$ollamaUrl/api/generate" -Method Post -ContentType 'application/json' -Body (@{ model = $m; keep_alive = 0 } | ConvertTo-Json) | Out-Null } catch {}
 }
 $results | Group-Object model, harness | ForEach-Object {
     [pscustomobject]@{ model = $_.Name; passed = @($_.Group | Where-Object { $_.pass -eq $true -or $_.pass -eq 'True' }).Count; total = $_.Count; minutes = [math]::Round(($_.Group | Measure-Object minutes -Sum).Sum, 1) }

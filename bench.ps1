@@ -8,7 +8,9 @@ param(
     [string]$Out = "$PSScriptRoot\results.csv"
 )
 
-$api = 'http://localhost:11434/api'
+# Set LLM_EVAL_OLLAMA_URL (e.g. http://192.168.1.66:11434) to test a remote server. ram_delta_gb is then
+# measured on this machine, not the server, so ignore it.
+$api = "$(if ($env:LLM_EVAL_OLLAMA_URL) { $env:LLM_EVAL_OLLAMA_URL.TrimEnd('/') } else { 'http://127.0.0.1:11434' })/api"
 $needle = 'The secret launch code for Project Heron is 7-ALPHA-4419.'
 $sentences = @(
     'The committee reviewed the quarterly logistics report and noted steady progress across all regions.',

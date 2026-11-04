@@ -62,6 +62,14 @@ All of these rest on 8 runs per model, so a difference of a minute or two in tas
 - [remote-setup-prompt.md](remote-setup-prompt.md) is a prompt for setting up pi and opencode on another computer to use this server over the LAN.
 - [remote-csv-task-setup.md](remote-csv-task-setup.md) is a prompt for recreating the CSV-parser task on another computer, so you can run it by hand.
 
+## Testing from another computer
+
+[remote-eval.ps1](remote-eval.ps1) runs the coding tests in pi and opencode, plus the time-to-first-token test, from another Windows computer against the Ollama server at `http://192.168.1.66:11434`. The models run on the server; the agents, builds and tests run locally. Results go to `results-<computer name>\`.
+
+- **Prompt for an agent:** [remote-testing-prompt.md](remote-testing-prompt.md) walks a coding agent on the other computer through the prerequisites, a smoke test, the full run and a comparison with the results above.
+- **Any server:** `agent-eval.ps1`, `bench.ps1` and `ttft.ps1` use the address in `LLM_EVAL_OLLAMA_URL`, or `http://127.0.0.1:11434` if it's unset.
+- **Isolated harnesses:** [install-harnesses.ps1](install-harnesses.ps1) installs pinned copies (pi 1.5.0 and opencode 1.19.5) with their own config folder, so pi or opencode already set up on that computer isn't touched.
+
 ## Files
 
 - **Main scripts:** [narrow.ps1](narrow.ps1) is the pipeline. [agent-eval.ps1](agent-eval.ps1), [bench.ps1](bench.ps1) and [ttft.ps1](ttft.ps1) are the three tests.

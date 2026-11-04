@@ -6,7 +6,8 @@ param(
     [string]$Out = "$PSScriptRoot\ttft-results.csv"
 )
 Add-Type -AssemblyName System.Net.Http
-$api = 'http://127.0.0.1:11434/api'
+# Set LLM_EVAL_OLLAMA_URL (e.g. http://192.168.1.66:11434) to measure a remote server; network time is included.
+$api = "$(if ($env:LLM_EVAL_OLLAMA_URL) { $env:LLM_EVAL_OLLAMA_URL.TrimEnd('/') } else { 'http://127.0.0.1:11434' })/api"
 $http = [System.Net.Http.HttpClient]::new(); $http.Timeout = [TimeSpan]::FromHours(2)
 $sentences = @(
     'The committee reviewed the quarterly logistics report and noted steady progress across all regions.',
