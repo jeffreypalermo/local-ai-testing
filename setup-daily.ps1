@@ -1,6 +1,7 @@
 # Daily-use setup on this Ollama box:
 #  - Ollama (the tray app's own server, which starts at login and is exposed to the LAN) defaults every
 #    model to its largest tested context: OLLAMA_CONTEXT_LENGTH=1M, which Ollama caps at each model's limit.
+#    OLLAMA_KEEP_ALIVE=-1 keeps the loaded model in memory until another model is requested.
 #  - pi and opencode list every kept model at that context, with Nemotron 3.5 Super as the default.
 # Writes a report to setup-daily.txt next to this script.
 $root = $PSScriptRoot
@@ -22,7 +23,7 @@ $models = [ordered]@{
 }
 
 # 1) Ollama server settings (user environment; the tray app passes them to its server).
-$envVars = [ordered]@{ OLLAMA_CONTEXT_LENGTH = '1048576'; OLLAMA_FLASH_ATTENTION = '1'; OLLAMA_KV_CACHE_TYPE = 'q8_0'; OLLAMA_MAX_LOADED_MODELS = '1' }
+$envVars = [ordered]@{ OLLAMA_CONTEXT_LENGTH = '1048576'; OLLAMA_FLASH_ATTENTION = '1'; OLLAMA_KV_CACHE_TYPE = 'q8_0'; OLLAMA_MAX_LOADED_MODELS = '1'; OLLAMA_KEEP_ALIVE = '-1' }
 foreach ($k in $envVars.Keys) {
     [Environment]::SetEnvironmentVariable($k, $envVars[$k], 'User')
     Set-Item "env:$k" $envVars[$k]

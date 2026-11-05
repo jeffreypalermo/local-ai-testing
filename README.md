@@ -63,6 +63,7 @@ All of these rest on 8 runs per model, so a difference of a minute or two in tas
 ## Daily setup
 
 - [setup-daily.ps1](setup-daily.ps1) sets Ollama's default context to 1M, which Ollama caps at each model's own limit.
+  - It also sets `OLLAMA_KEEP_ALIVE=-1`, so a loaded model stays in memory until a different model is requested, instead of unloading after 5 idle minutes. [keep-loaded.ps1](keep-loaded.ps1) applies just that setting to a running server and restarts it.
   - It runs the Ollama app's server, which has "Expose to network" on.
   - It writes pi and opencode configs with 7 models, defaulting to Nemotron Super. Since 2026-11-04 the Flash-Next entry is the 4-bit build; [swap-flashnext.ps1](swap-flashnext.ps1) made that change in configs that already existed.
 - [remote-setup-prompt.md](remote-setup-prompt.md) is a prompt for setting up pi and opencode on another computer to use this server over the LAN.
